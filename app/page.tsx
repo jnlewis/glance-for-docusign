@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/button';
-import { Mail } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { DocusignLoginButton } from '@/components/atoms/DocusignLoginButton/DocusignLoginButton';
+import { EmailContactLink } from '@/components/atoms/EmailContactLink/EmailContactLink';
 
 // const screenshotWidth = 800;
 // const screenshotHeight = 450;
@@ -10,8 +10,6 @@ const screenshotWidth = 640;
 const screenshotHeight = 360;
 
 export default function LandingPage() {
-  const user = 'jeffreylewis';
-  const domain = 'comexiaslabs.com';
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -44,16 +42,16 @@ export default function LandingPage() {
                 Glance <span className="text-2xl">for Docusign</span>
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl mt-8">
-                Easy to use Generate AI Assistant & Chatbot for Docusign.
+                Your AI Assistant for Documents and Agreements. Simplify document management with an AI-powered chatbot tailored for Docusign.
               </p>
             </div>
 
             <div className="space-y-12">
               <div className="grid gap-6 lg:grid-cols-2">
                 <div className="space-y-4 mt-12 lg:order-2">
-                  <h3 className="text-2xl font-bold">Get quick answers to documents and agreements</h3>
+                  <h3 className="text-2xl font-bold">Get Quick Insights on Your Agreements</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Glance instantly studies your document to provide you with quick insights.
+                    Glance uses advanced generative AI to quickly analyze your documents and agreements, providing clear, concise answers at your fingertips.
                   </p>
                   <div className="flex-grow flex flex-wrap gap-2">
                     {[
@@ -82,9 +80,9 @@ export default function LandingPage() {
 
               <div className="grid gap-6 lg:grid-cols-2">
                 <div className="space-y-4 mt-12">
-                  <h3 className="text-2xl font-bold">No setup required</h3>
+                  <h3 className="text-2xl font-bold">No Setup. Instant Support.</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Support for Envelopes, Documents and Navigator Agreements
+                    Seamlessly integrates with Docusign to support Envelopes, Documents, and Navigator Agreements — no configuration needed.
                   </p>
                 </div>
                 <div className="aspect-video overflow-hidden">
@@ -100,9 +98,9 @@ export default function LandingPage() {
 
               <div className="grid gap-6 lg:grid-cols-2">
                 <div className="space-y-4 mt-12 lg:order-2">
-                  <h3 className="text-2xl font-bold">Build in support for industry leading AI models</h3>
+                  <h3 className="text-2xl font-bold">Build-in AI models</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Glance comes with build in support for over ten large language models from various AI companies. No setup required.
+                    Glance comes with build in support for over ten top-tier large language models.
                   </p>
                   <div className="flex flex-wrap justify-center items-center gap-14 pt-8">
                     <Image src="/assets/ai/anthropic_24x24.svg" alt="anthropic" width={48} height={48} className="invert" />
@@ -122,7 +120,25 @@ export default function LandingPage() {
                   />
                 </div>
               </div>
-              
+
+              <div className="grid gap-6 lg:grid-cols-2">
+                <div className="space-y-4 mt-12">
+                  <h3 className="text-2xl font-bold">Compliant and Secure by Design</h3>
+                  <p className="text-gray-500 dark:text-gray-400">
+                  Your privacy is our priority. Glance processes your documents securely without storing any private data, ensuring complete confidentiality while adhering to the highest compliance standards.
+                  </p>
+                </div>
+                <div className="aspect-video overflow-hidden">
+                  <Image
+                    src="/assets/screenshots/screenshot-prompt-config.png"
+                    alt="Prompt Library"
+                    width={screenshotWidth}
+                    height={screenshotHeight}
+                    className="object-cover rounded-lg"
+                  />
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
@@ -140,9 +156,7 @@ export default function LandingPage() {
               <div>
                 <h4 className="font-bold text-white mb-4">Connect with us</h4>
                 <div className="flex space-x-4">
-                  <Link href={`mailto:${user}@${domain}`} className="text-white hover:text-white" target="_blank">
-                    <Mail className="w-6 h-6" />
-                  </Link>
+                  <EmailContactLink />
                 </div>
               </div>
             </div>
