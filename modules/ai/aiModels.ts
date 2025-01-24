@@ -16,9 +16,9 @@ export enum ModelIds {
   AMAZON_NOVA_LITE_V1 = 'amazon.nova-lite-v1:0',
   AMAZON_NOVA_MICRO_V1 = 'amazon.nova-micro-v1:0',
   ANTHROPIC_CLAUDE_3_SONNET = 'anthropic.claude-3-sonnet-20240229-v1:0',
-  ANTHROPIC_CLAUDE_3_5_SONNET = 'anthropic.claude-3-5-sonnet-20241022-v2:0',
+  ANTHROPIC_CLAUDE_3_5_SONNET = 'us.anthropic.claude-3-5-sonnet-20241022-v2:0',
   ANTHROPIC_CLAUDE_3_HAIKU = 'anthropic.claude-3-haiku-20240307-v1:0',
-  ANTHROPIC_CLAUDE_3_5_HAIKU = 'anthropic.claude-3-5-haiku-20241022-v1:0',
+  // ANTHROPIC_CLAUDE_3_5_HAIKU = 'us.anthropic.claude-3-5-haiku-20241022-v1:0',
   COHERE_COMMAND_TEXT_V14 = 'cohere.command-text-v14',
   COHERE_COMMAND_LIGHT_TEXT_V14 = 'cohere.command-light-text-v14',
   META_LLAMA3_1_8B_INSTRUCT_V1 = 'meta.llama3-1-8b-instruct-v1:0',
@@ -29,6 +29,18 @@ export enum ModelIds {
 }
 
 export const MODELS: ModelInfo[] = [
+  {
+    service: ModelServices.AWSBedrock,
+    provider: 'Amazon',
+    modelName: 'Nova Lite',
+    modelId: ModelIds.AMAZON_NOVA_LITE_V1,
+  },
+  {
+    service: ModelServices.AWSBedrock,
+    provider: 'Amazon',
+    modelName: 'Nova Micro',
+    modelId: ModelIds.AMAZON_NOVA_MICRO_V1,
+  },
   {
     service: ModelServices.AWSBedrock,
     provider: 'Amazon',
@@ -44,15 +56,15 @@ export const MODELS: ModelInfo[] = [
   {
     service: ModelServices.AWSBedrock,
     provider: 'Anthropic',
-    modelName: 'Claude 3 Sonnet',
+    modelName: 'Claude 3 Sonnet (Throttled)',
     modelId: ModelIds.ANTHROPIC_CLAUDE_3_SONNET,
   },
-  // {
-  //   service: ModelServices.AWSBedrock,
-  //   provider: 'Anthropic',
-  //   modelName: 'Claude 3.5 Sonnet',
-  //   modelId: ModelIds.ANTHROPIC_CLAUDE_3_5_SONNET,
-  // },
+  {
+    service: ModelServices.AWSBedrock,
+    provider: 'Anthropic',
+    modelName: 'Claude 3.5 Sonnet (Throttled)',
+    modelId: ModelIds.ANTHROPIC_CLAUDE_3_5_SONNET,
+  },
   {
     service: ModelServices.AWSBedrock,
     provider: 'Anthropic',
