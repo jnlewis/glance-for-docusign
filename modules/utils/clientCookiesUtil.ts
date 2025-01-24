@@ -4,10 +4,10 @@
  * @returns The value of the cookie, or null if not found
  */
 export function getClientCookie(name: string): string | null {
-  if (typeof window === "undefined") {
+  if (typeof window === 'undefined') {
     return null;
   }
-  if (typeof document === "undefined") {
+  if (typeof document === 'undefined') {
     return null;
   }
 

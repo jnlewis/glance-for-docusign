@@ -30,9 +30,7 @@ export const fetchAgreementDetails = async (accountId: string, agreementId: stri
     logger.logInfo('fetchAgreementDetails', 'Begin');
 
     const client = await apiClient(basePath, accessToken);
-    const response = await client.get<APIAgreementDetails>(
-      `/v1/accounts/${accountId}/agreements/${agreementId}`,
-    );
+    const response = await client.get<APIAgreementDetails>(`/v1/accounts/${accountId}/agreements/${agreementId}`);
 
     if (!response || !response.data) {
       throw new Error(`Received invalid response with status: ${response.status}`);
