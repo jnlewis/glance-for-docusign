@@ -7,7 +7,7 @@ export function GET() {
 
   const params = new URLSearchParams({
     response_type: 'code',
-    scope: 'signature adm_store_unified_repo_read models_read',
+    scope: 'signature cors adm_store_unified_repo_read models_read',
     client_id: clientId,
     redirect_uri: redirectUri,
   });

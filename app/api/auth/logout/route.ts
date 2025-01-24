@@ -6,6 +6,7 @@ export async function GET(request: Request) {
     deleteCookie('dai_accountName');
     deleteCookie('dai_accountId');
     deleteCookie('dai_accessToken');
+    deleteCookie('dai_basePath');
 
     const redirectUrl = new URL('/', request.url);
 
