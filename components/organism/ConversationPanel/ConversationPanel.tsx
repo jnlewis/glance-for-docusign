@@ -25,6 +25,7 @@ import { ModelIds, MODELS } from '@/modules/ai/aiModels';
 import { DEFAULT_MODELID } from '@/config/constants';
 import { getClientCookie } from '@/modules/utils/clientCookiesUtil';
 import { fetchAgreementDetails } from '@/services/navigatorService';
+import Markdown from 'react-markdown';
 
 const initialMessages = [
   {
@@ -147,7 +148,7 @@ export default function ConversationPanel({ documentType, document, agreement }:
                   <div
                     className={`rounded-lg p-3 ${message.role === 'user' ? 'bg-gray-600 text-white' : 'bg-gray-200'}`}
                   >
-                    {message.content}
+                    <Markdown>{message.content}</Markdown>
                   </div>
                 </div>
               </div>
