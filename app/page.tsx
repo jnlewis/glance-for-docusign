@@ -10,13 +10,12 @@ const screenshotWidth = 640;
 const screenshotHeight = 360;
 
 export default function LandingPage() {
-
   return (
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-14 flex items-center sticky top-0 bg-white z-50">
         <Link className="flex items-center justify-center" href="#">
           <Image src="/assets/glance-logo-wide-light.svg" alt="Glance for Docusign" width={100} height={40} />
-          <span className="sr-only">AI for Docusign</span>
+          <span className="sr-only">Glance for Docusign</span>
         </Link>
         <nav className="ml-4 flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#features">
@@ -34,7 +33,6 @@ export default function LandingPage() {
       </header>
 
       <main className="flex-1">
-        
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-800 dark:bg-gray-800 text-white">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="mb-44 text-center">
@@ -42,7 +40,8 @@ export default function LandingPage() {
                 Glance <span className="text-2xl">for Docusign</span>
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl mt-8">
-                Your AI Assistant for Documents and Agreements. Simplify document management with an AI-powered chatbot tailored for Docusign.
+                Your AI Assistant for Documents and Agreements. Simplify document management with an AI-powered chatbot
+                tailored for Docusign.
               </p>
             </div>
 
@@ -51,7 +50,8 @@ export default function LandingPage() {
                 <div className="space-y-4 mt-12 lg:order-2">
                   <h3 className="text-2xl font-bold">Get Quick Insights on Your Agreements</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Glance uses advanced generative AI to quickly analyze your documents and agreements, providing clear, concise answers at your fingertips.
+                    Glance uses advanced generative AI to quickly analyze your documents and agreements, providing
+                    clear, concise answers at your fingertips.
                   </p>
                   <div className="flex-grow flex flex-wrap gap-2">
                     {[
@@ -82,7 +82,8 @@ export default function LandingPage() {
                 <div className="space-y-4 mt-12">
                   <h3 className="text-2xl font-bold">No Setup. Instant Support.</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Seamlessly integrates with Docusign to support Envelopes, Documents, and Navigator Agreements — no configuration needed.
+                    Seamlessly integrates with Docusign to support Envelopes, Documents, and Navigator Agreements — no
+                    configuration needed.
                   </p>
                 </div>
                 <div className="aspect-video overflow-hidden">
@@ -103,7 +104,13 @@ export default function LandingPage() {
                     Glance comes with build in support for over ten top-tier large language models.
                   </p>
                   <div className="flex flex-wrap justify-center items-center gap-14 pt-8">
-                    <Image src="/assets/ai/anthropic_24x24.svg" alt="anthropic" width={48} height={48} className="invert" />
+                    <Image
+                      src="/assets/ai/anthropic_24x24.svg"
+                      alt="anthropic"
+                      width={48}
+                      height={48}
+                      className="invert"
+                    />
                     <Image src="/assets/ai/amazon_24x24.svg" alt="amazon" width={48} height={48} className="invert" />
                     <Image src="/assets/ai/cohere_24x24.svg" alt="cohere" width={48} height={48} />
                     <Image src="/assets/ai/meta_24x24.svg" alt="meta" width={48} height={48} />
@@ -125,7 +132,8 @@ export default function LandingPage() {
                 <div className="space-y-4 mt-12">
                   <h3 className="text-2xl font-bold">Compliant and Secure by Design</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                  Your privacy is our priority. Glance processes your documents securely without storing any private data, ensuring complete confidentiality while adhering to the highest compliance standards.
+                    Your privacy is our priority. Glance processes your documents securely without storing any private
+                    data, ensuring complete confidentiality while adhering to the highest compliance standards.
                   </p>
                 </div>
                 <div className="aspect-video overflow-hidden">
@@ -138,11 +146,9 @@ export default function LandingPage() {
                   />
                 </div>
               </div>
-
             </div>
           </div>
         </section>
-        
       </main>
 
       <footer id="contact" className="bg-black text-white py-12 shadow-[0_-5px_15px_rgba(0,0,0,0.2)]">
@@ -151,7 +157,8 @@ export default function LandingPage() {
             <div className="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
               <Image src="/assets/glance-logo-wide-light-transparent.svg" alt="Company Logo" width={120} height={40} />
               <p className="text-gray-400 my-4">
-                Glance for Docusign is an easy to use Generate AI Assistant & Chatbot for your documents and agreements on Docusign.
+                Glance for Docusign is an easy to use Generate AI Assistant & Chatbot for your documents and agreements
+                on Docusign.
               </p>
               <div>
                 <h4 className="font-bold text-white mb-4">Connect with us</h4>
@@ -193,9 +200,7 @@ export default function LandingPage() {
           </div>
 
           <div className="pt-24">
-            <p className="text-center text-gray-500 text-sm">
-              Developed by Jeffrey Lewis. All rights reserved.
-            </p>
+            <p className="text-center text-gray-500 text-sm">Developed by Jeffrey Lewis. All rights reserved.</p>
           </div>
         </div>
       </footer>

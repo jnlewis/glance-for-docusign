@@ -14,7 +14,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Message } from '@/types/message';
 import { downloadDocument } from '@/services/documentService';
 import { APIAgreementDataItem, APIEnvelopeDocumentItem } from '@/services/apiTypes';
@@ -39,10 +39,10 @@ interface ConversationPanelProps {
   document?: {
     envelopeId: string;
     doc: APIEnvelopeDocumentItem;
-  }
+  };
   agreement?: {
     agreement: APIAgreementDataItem;
-  }
+  };
 }
 
 export default function ConversationPanel({ documentType, document, agreement }: ConversationPanelProps) {
@@ -52,7 +52,7 @@ export default function ConversationPanel({ documentType, document, agreement }:
   const [input, setInput] = useState<string>('');
   const [downloading, setDownloading] = useState<boolean>(false);
   const [contentText, setContentText] = useState<string>('');
-  const [selectedModel, setSelectedModel] = useState<string>(DEFAULT_MODELID)
+  const [selectedModel, setSelectedModel] = useState<string>(DEFAULT_MODELID);
 
   useEffect(() => {
     const loadDoc = async () => {
@@ -62,7 +62,11 @@ export default function ConversationPanel({ documentType, document, agreement }:
         setContentText(JSON.stringify(agreementDetails));
       }
       if (documentType === 'document' && document) {
-        const documentText = await downloadDocument(getClientCookie('dai_accountId'), document.envelopeId, document.doc.documentId);
+        const documentText = await downloadDocument(
+          getClientCookie('dai_accountId'),
+          document.envelopeId,
+          document.doc.documentId,
+        );
         setContentText(documentText.text);
       }
       setDownloading(false);
@@ -101,33 +105,34 @@ export default function ConversationPanel({ documentType, document, agreement }:
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
       <Card className="w-full max-w-2xl">
         <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle>AI Assistant Chat</CardTitle><Dialog>
-          <DialogTrigger asChild>
-            <Button variant="ghost" size="icon">
-              <Settings className="h-4 w-4" />
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <DialogTitle>Chat Settings</DialogTitle>
-              <DialogDescription>Choose your preferred AI model</DialogDescription>
-            </DialogHeader>
-            <div className="py-4">
-              <Select value={selectedModel} onValueChange={(value) => setSelectedModel(value)}>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select AI Model" />
-                </SelectTrigger>
-                <SelectContent>
-                  {MODELS.map((model) => (
-                    <SelectItem key={model.modelId} value={model.modelId}>
-                      {`${model.provider} ${model.modelName}`}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-          </DialogContent>
-        </Dialog>
+          <CardTitle>AI Assistant Chat</CardTitle>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Settings className="h-4 w-4" />
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Chat Settings</DialogTitle>
+                <DialogDescription>Choose your preferred AI model</DialogDescription>
+              </DialogHeader>
+              <div className="py-4">
+                <Select value={selectedModel} onValueChange={(value) => setSelectedModel(value)}>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select AI Model" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {MODELS.map((model) => (
+                      <SelectItem key={model.modelId} value={model.modelId}>
+                        {`${model.provider} ${model.modelName}`}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </DialogContent>
+          </Dialog>
         </CardHeader>
         <CardContent>
           <ScrollArea className="h-[60vh] pr-4">
