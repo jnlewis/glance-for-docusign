@@ -69,8 +69,8 @@ export default function LandingPage() {
                 </div>
                 <div className="aspect-video overflow-hidden lg:order-1">
                   <Image
-                    src="/assets/screenshots/screenshot-browse-prompts.png"
-                    alt="Presets"
+                    src="/assets/screenshots/glance-screenshot-airesponse.png"
+                    alt="glance-screenshot-airesponse"
                     width={screenshotWidth}
                     height={screenshotHeight}
                     className="object-cover rounded-lg"
@@ -88,8 +88,8 @@ export default function LandingPage() {
                 </div>
                 <div className="aspect-video overflow-hidden">
                   <Image
-                    src="/assets/screenshots/screenshot-prompt-config.png"
-                    alt="Prompt Library"
+                    src="/assets/screenshots/glance-screenshot-docs.png"
+                    alt="glance-screenshot-docs"
                     width={screenshotWidth}
                     height={screenshotHeight}
                     className="object-cover rounded-lg"
@@ -119,8 +119,8 @@ export default function LandingPage() {
                 </div>
                 <div className="aspect-video overflow-hidden lg:order-1">
                   <Image
-                    src="/assets/screenshots/screenshot-extensions.png"
-                    alt="Plug-ins"
+                    src="/assets/screenshots/glance-screenshot-aimodels.png"
+                    alt="glance-screenshot-aimodels"
                     width={screenshotWidth}
                     height={screenshotHeight}
                     className="object-cover rounded-lg"
@@ -138,8 +138,8 @@ export default function LandingPage() {
                 </div>
                 <div className="aspect-video overflow-hidden">
                   <Image
-                    src="/assets/screenshots/screenshot-prompt-config.png"
-                    alt="Prompt Library"
+                    src="/assets/screenshots/glance-screenshot-aicontent.png"
+                    alt="glance-screenshot-aicontent"
                     width={screenshotWidth}
                     height={screenshotHeight}
                     className="object-cover rounded-lg"
