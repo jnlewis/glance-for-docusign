@@ -29,8 +29,6 @@ export const serverOnlyDownloadDocumentAsText = async (
 
     const contentType = response.headers['content-type'];
 
-    console.log('contentType', contentType);
-
     let text = '';
 
     if (contentType === 'application/pdf') {

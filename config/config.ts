@@ -21,5 +21,5 @@ export const Config: AppConfig = {
   docusignRedirectUri: process.env.DOCUSIGN_REDIRECT_URI || '',
   docusignAuthUrl: process.env.DOCUSIGN_AUTH_URL || '',
   docusignTokenUrl: process.env.DOCUSIGN_TOKEN_URL || '',
-  docusignNavigatorApi: process.env.DOCUSIGN_NAVIGATOR_API_BASE_URL || 'https://api-d.docusign.com',
+  docusignNavigatorApi: process.env.NEXT_PUBLIC_DOCUSIGN_NAVIGATOR_API_BASE_URL || '/api/docusign/navigator-proxy',
 };
