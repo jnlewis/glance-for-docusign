@@ -35,6 +35,15 @@ export default function Page() {
               <p className="text-l font-bold">{cookieAccountId}</p>
             </CardContent>
           </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Environment</CardTitle>
+              <CardDescription>Docusign app environment</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-l font-bold">Demo</p>
+            </CardContent>
+          </Card>
         </div>
 
         <Card className="mt-6">
