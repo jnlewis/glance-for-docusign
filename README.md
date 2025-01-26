@@ -32,11 +32,30 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 This project uses `yarn`, but you may use `npm` or other NPM compatible package managers.
 
-```bash
-# Install dependencies
-yarn install
+1. Create environment file `.env.local` in the root folder with the following content:
 
-# Start development server
+```
+NEXT_PUBLIC_API_HOST=http://localhost:3000
+NEXT_PUBLIC_AI_API_KEY=
+DOCUSIGN_CLIENT_ID=
+DOCUSIGN_CLIENT_SECRET=
+DOCUSIGN_REDIRECT_URI=http://localhost:3000/api/auth/callback
+DOCUSIGN_AUTH_URL=https://account-d.docusign.com/oauth/auth
+DOCUSIGN_TOKEN_URL=https://account-d.docusign.com/oauth/token
+# NEXT_PUBLIC_DOCUSIGN_NAVIGATOR_API_BASE_URL=https://api-d.docusign.com
+NEXT_PUBLIC_DOCUSIGN_NAVIGATOR_API_BASE_URL=/api/docusign/navigator-proxy
+
+```
+
+2. Install dependencies
+
+```bash
+yarn install
+```
+
+3. Start application
+
+```bash
 yarn dev
 ```
 
